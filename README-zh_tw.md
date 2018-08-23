@@ -25,3 +25,22 @@
 程式設計師們被約定成俗的慣例給哄騙。 但每隔一段時間，通過巧妙地違反慣例，你就會強迫他用放大鏡閱讀每一行程式碼。
 
 你也許會認為每個語言的特性都會使程式碼難以維護；不然，只有適當地誤用才行。
+
+## 命名
+
+> _"When I use a word," Humpty Dumpty said, in a rather scornful tone, "it means just what I choose it to mean - neither more nor less."_
+> - Lewis Carroll -- Through the Looking Glass, Chapter 6
+
+撰寫無法維護程式碼絕大部分的技巧，是命名變數以及方法的藝術。 它們對編譯器完全不重要。 且它們給你超大的空間去利用它們使維護的程式設計師搞得一頭霧水。
+
+#### New Uses For <cite>Names For Baby</cite>
+
+去買一本嬰兒命名的書的副本，然後你永遠不會因為命名變數而感到茫然。 Fred 是一個非常棒的名字，而且非常容易打字。 如果你正在找容易打字的變數名稱，如果你打字用的是 DSK 鍵盤，就試試看 `asdf` 或 `aoeu`。
+
+#### 單一字元的變數名稱
+
+如果你把你的變數取名為 `a`、`b`、`c` ，接著它就會讓簡單的文字編輯器沒辦法搜尋到。 此外，沒有人能夠猜出它們是幹嘛的。 如果有人試圖打破 FØRTRAN 使用 `i`、`j`、`k` 作為索引變數的殊榮，請把它們替換成 `ii`、`jj`、`kk` ，嚴正警吿西班牙宗教裁判所當初對異教徒做得一切（異教徒會被處死，參閱[WiKi](https://zh.wikipedia.org/wiki/%E8%A5%BF%E7%8F%AD%E7%89%99%E5%AE%97%E6%95%99%E8%A3%81%E5%88%A4%E6%89%80)）。
+
+#### 富含創意的拼錯字
+
+如果你必須得用具描述性的變數和函式名稱，就把它們拼錯吧！ 藉由拼錯一些函式和變數的名字，並把其他的拼正確（像是 `SetPintleOpening` 和 `SetPintalClosing` ），我們就可以有效地讓 grep 或 IDE 搜尋技術變無效。 它的效果讓人讚不絕口。 再加入一些國際風味的拼字如 theatres/theaters 差異般的 _tory_ or _tori_ ，會更增添韻味。
