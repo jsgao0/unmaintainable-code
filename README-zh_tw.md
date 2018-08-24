@@ -145,3 +145,27 @@ This confuses the reader because they have difficulty disassociating the emotion
 #### 回收你的變數
 
 只要規則允許，重新利用已有的變數名稱。 同樣地，為兩個無關的目的使用相同的臨時變數(purporting to save stack slots)。 For a fiendish variant, morph the variable, for example, assign a value to a variable at the top of a very long method, and then somewhere in the middle, change the meaning of the variable in a subtle way, such as converting it from a 0-based coordinate to a 1-based coordinate. Be certain not to document this change in meaning.
+
+#### Cd wrttn wtht vwls s mch trsr
+
+正當在變數或函式名稱中用縮寫時，break the boredom with several variants for the same word, and even spell it out longhand once in while. 這樣有助於擊敗那些使用文字搜尋去理解你程式的部分樣貌的懶惰鬼。 研究一個變體命名的策略，例如：把國際化的 _colour_ 、美式的 _color_ ，以及痞子腔 _kulerz_ 混用。 If you spell out names in full, there is only one possible way to spell each name. 這些對維護的程式設計師來說非常簡單地就能夠記起來。 因為有很多不同的方法去縮寫一個詞，你可以有多個不同的變數都作為同樣顯而易見的目的。 作為額外的好處，維護的程式設計師可能甚至不會注意到它們是單獨的變量。
+
+#### 誤導的名稱
+
+確保每個函式的實作內容都比名稱上來得多一點或少一點。 來個簡單的例子，有個名為 `isValid(x)` 的函式應當有把 `x` 轉成二進制並將結果存入資料庫的功能。
+
+#### 前綴 m_
+
+在 C++ 的世界裡有一種命名規則，就是將 `m_` 作為前綴，加在每個成員前面。 This is supposed to help you tell them apart from methods, so long as you forget that "method" also starts with the letter "m".
+
+#### o_apple obj_apple
+
+在每個類別的每個實例前面加上 "o" 或是 "obj"作為前綴，以顯示你正在思慮著巨大的多型架構。
+
+#### 匈牙利符號
+
+匈牙利符號是原始碼混淆技術中的戰略性核武，用吧！ 由於這種用法玷污了大量的原始碼，沒有什麼比完美計劃好的匈牙利命名攻擊來得更快速打爆維護的程式設計師。 下列的提示將幫助你敗壞匈牙利命名原本的意圖：
+
+ - 在 C++ 和其他語言中，堅持使用 "c" 作為常數，直接強制規定變數裡的常數。
+
+ - Seek out and use Hungarian warts that have meaning in languages other than your current language. 
