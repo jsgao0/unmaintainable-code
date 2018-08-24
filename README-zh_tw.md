@@ -44,3 +44,19 @@
 #### 富含創意的拼錯字
 
 如果你必須得用具描述性的變數和函式名稱，就把它們拼錯吧！ 藉由拼錯一些函式和變數的名字，並把其他的拼正確（像是 `SetPintleOpening` 和 `SetPintalClosing` ），我們就可以有效地讓 grep 或 IDE 搜尋技術變無效。 它的效果讓人讚不絕口。 再加入一些國際風味的拼字如 theatres/theaters 差異般的 _tory_ or _tori_ ，會更增添韻味。
+
+#### 抽象一點
+
+在命名函式和變數時，重度地使用像是 _it_ 、 _everything_ 、 _data_ 、 _handle_ 、 _stuff_ 、 _do_ 、 _routine_ 、 _perform_ 和數字，例如： `routineX48` 、 `PerformDataFunction` 、 `DoIt` 、 `HandleStuff` 或是 `do_args_method` 等等的抽象字眼。
+
+#### 糸 宿 田 各 言 吾
+
+使用縮略語來保持程式碼的精簡。 真男人不用解釋這些縮寫，因為他們天生就懂得這些字。 
+
+#### 近義詞替代品
+
+To break the boredom, use a thesaurus to look up as much alternate vocabulary as possible to refer to the same action, e.g. _display_, _show_, _present_. 隱約感受到有些微地差異，但實際上並沒有。 不過，如果有兩個類似的函式之前有關鍵差異，則要一直用相同的詞去描述這兩個函式，例如： _print_ 表示「寫入到一個檔案」和「用墨水在紙上列印」。 在任何情況下，都不要為了特定目的的專案編寫明確定義的語彙表。 這樣是不專業的，因為這違反了結構化設計 _資訊隱藏_ 的原則。 
+
+#### 使用其他語言的複數形式
+
+A VMS script kept track of the "statii" returned from various "Vaxen". Esperanto , [Klingon](http://www.kli.org/) and [Hobbitese](http://www.chriswetherell.com/hobbit) qualify as languages for these purposes. For pseudo-Esperanto pluraloj, add oj. You will be doing your part toward world peace.
