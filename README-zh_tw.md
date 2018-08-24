@@ -60,3 +60,41 @@ To break the boredom, use a thesaurus to look up as much alternate vocabulary as
 #### 使用其他語言的複數形式
 
 A VMS script kept track of the "statii" returned from various "Vaxen". Esperanto , [Klingon](http://www.kli.org/) and [Hobbitese](http://www.chriswetherell.com/hobbit) qualify as languages for these purposes. For pseudo-Esperanto pluraloj, add oj. You will be doing your part toward world peace.
+
+#### 字詞的音節第一個字母大寫
+
+隨機地把字詞裏頭一個音節中的第一個字母大寫。 例如： `ComputeRasterHistoGram()` （Histo`G`ram）。
+
+#### 重複使用名稱
+
+在程式語言的規則允許下，把類別、建構子、方法、member variables、參數以及區域變數都給相同的名稱。 在 `{}` 區域內重複使用相同的區域變數名稱，是大加分。 這樣做的目的是為了強迫維護的程式設計師去仔細地檢查每個實例中的區塊範圍。 特別說一下 Java ，可以將普通的方法偽裝成建構子。
+
+#### Åccented Letters
+
+Use accented characters on variable names. E.g.
+
+```c
+typedef struct { int i; } ínt;
+```
+
+where the second ínt's í is actually i-acute. With only a simple text editor, it's nearly impossible to distinguish the slant of the accent mark.
+
+#### 好好地利用編譯器在命名長度上的限制
+
+如果編譯器只能識別第一個部分的命名，像是每個名稱只能有八個字母，你就可以在後面做豐富的變化，例如： `var_unit_update()` 和 `var_unit_setup()` 。 這樣一來，編譯器會把這兩個函式都當作是 `var_unit` 。
+
+#### 我們的好朋友：底線
+
+用 `_` 和 `__` 作為識別符吧！
+
+#### 混合語言
+
+隨意地穿插兩種語言（人類語言或電腦語言）。 如果你的老闆堅持要你用他的語言，你就告訴他你可以用自己的語言好好地組織好你的想法，抑或是，若不起作用，就宣稱他歧視你的語言，並趁機威脅要告他，好好地賺一筆。
+
+#### ASCII 擴充碼
+
+ASCII 擴充的字符完美地適用於變數名稱，包括了 ß 、 Ð 、以及 ñ 。 它們幾乎無法在簡易的編輯器中直接用鍵盤輸入，除非你用複製/貼上。
+
+#### 用其他語言來命名
+
+以外語辭典作為根本來命名變數。 舉例來說，用德文的 _punkt_ 來表示 _point_ 。 不熟悉德文的維護程序員，將開始一段多元文化的意義之旅。
