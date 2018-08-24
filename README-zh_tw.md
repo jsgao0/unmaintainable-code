@@ -125,3 +125,23 @@ This confuses the reader because they have difficulty disassociating the emotion
 #### 啥時要用 i
 
 永遠不要用 `i` 作為最內層的迴圈變數。 拿來用在其他用途吧。 大方地把 `i` 用在其他的用途上，尤其是作為非整數的變數，接著把 `n` 拿去作為迴圈索引。
+
+#### Conventions Schmentions
+
+不要遵守 [Sun Java 編碼規範](http://web.archive.org/web/20091003224540/http://java.sun.com/docs/codeconv/)，畢竟， Sun 自己也沒遵守。 幸運地是，編譯器不會因為你違反編碼規範而罷工。 這樣做的目的在於讓變數名稱之間擁有微小的差異。 如果你被逼著遵照大小寫的規範，你仍然可以推翻不明確的含糊地帶，例如：*同時*用 _input**F**ile**n**ame_ 和 _input**f**ile**N**ame_ 。 發明出屬於你自己的絕望又複雜的命名規則，然後幹譙那些沒有遵守的人們。
+
+#### 小寫的 l 和數字的 1 根本就像是兄弟
+
+用小寫的 l 表示長整數常數。 例如： `10l` 比 `10L` 更容易被誤認為是 `101`。 禁止任何能夠清楚分辨 `uvw` 、 `wW` 、 `gq9` 、 `2z` 、 `5s` 、 `il17|!j` 、 `oO08` 、 `` `'" `` 、 `;,.` 、 `m nn rn` 和 `{[()]}` 的字體。 盡量揮灑創意吧！
+
+#### 把全域變數的名稱當做私有變數再利用
+
+在模組 A 宣告一個全域陣列，接著在模組 B 的標頭檔裡面宣告一個同樣名稱的私有變數，這樣一來，就可以讓人以為你在模組 B 裡面正用著全域變數，事實上你一直在用的是相同名稱的私有變數。 不用特別為這個複寫在註解裡面做說明。
+
+#### 回收再利用
+
+用矛盾的方法回收變數，盡可能地混淆命名範圍。 舉例來說，假設你有 `A` 和 `B` 兩個全域變數，以及 `foo` 和 `bar` 兩個函式。 如果你知道 `A` 在正常情況下會被傳到 `foo` ，且 `B` 會被傳到 `bar` ，確保你定義的函式要是 `function foo(B)` 和 `function bar(A)` ，這樣一來，在函式裡面的 `A` 都會是引用 `B` ， `B` 則是一直引用 `A` 。 使用多一點的函式和全域變數時，你可以建立廣大的命名矛盾網路。
+
+#### 回收你的變數
+
+只要規則允許，重新利用已有的變數名稱。 同樣地，為兩個無關的目的使用相同的臨時變數(purporting to save stack slots)。 For a fiendish variant, morph the variable, for example, assign a value to a variable at the top of a very long method, and then somewhere in the middle, change the meaning of the variable in a subtle way, such as converting it from a 0-based coordinate to a 1-based coordinate. Be certain not to document this change in meaning.
