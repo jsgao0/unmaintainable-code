@@ -97,4 +97,31 @@ ASCII 擴充的字符完美地適用於變數名稱，包括了 ß 、 Ð 、以
 
 #### 用其他語言來命名
 
-以外語辭典作為根本來命名變數。 舉例來說，用德文的 _punkt_ 來表示 _point_ 。 不熟悉德文的維護程序員，將開始一段多元文化的意義之旅。
+以外語辭典作為根本來命名變數。 舉例來說，用德文的 _punkt_ 來表示 _point_ 。 不熟悉德文的維護程序員，將展開一段多元文化的意義之旅。
+
+#### 用數學命名
+
+選一些變數名稱來偽裝成數學運算子，例如：
+
+```js
+openParen = (slash + asterix) / equals;
+```
+
+#### 令人困惑的名字
+
+用一些與內含無關的字眼作為變數名稱。 例如：
+
+```js
+marypoppins = (superman + starship) / god;
+```
+
+This confuses the reader because they have difficulty disassociating the emotional connotations of the words from the logic they're trying to think about.
+
+
+#### 重新命名與重新利用
+
+這招在 Ada 特別管用，該語言不受標準化的混淆技術給影響。 The people who originally named all the objects and packages you use were morons. 並非要說服他們改變，just use renames and subtypes to rename everything to names of your own devising. 要確保有留下一些舊有名字作參考，讓人覺得是粗心打錯，而實際上是個陷阱。
+
+#### 啥時要用 i
+
+永遠不要用 `i` 作為最內層的迴圈變數。 拿來用在其他用途吧。 大方地把 `i` 用在其他的用途上，尤其是作為非整數的變數，接著把 `n` 拿去作為迴圈索引。
